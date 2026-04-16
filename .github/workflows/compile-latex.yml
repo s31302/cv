@@ -2,7 +2,7 @@ name: Build LaTeX CV
 on: [push]
 
 permissions:
-  contents: write # To jest ważne, żeby akcja mogła stworzyć Release
+  contents: write
 
 jobs:
   build_latex:
