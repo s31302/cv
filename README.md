@@ -1,3 +1,2 @@
-# Moje CV w LaTeX
-Oto podgląd mojego CV:
-![Podgląd CV](preview.png)
+# CV w LaTeX
+[📄 Pobierz moje CV w formacie PDF](https://github.com/s31302/cv/releases/download/latest/main.pdf)
