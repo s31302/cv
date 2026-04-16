@@ -1,0 +1,111 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Pakiety podstawowe ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{helvet}
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{tikz}
+
+% --- Konfiguracja strony ---
+\geometry{left=0.5cm, top=1cm, right=1cm, bottom=1cm}
+\pagestyle{empty}
+
+% --- Poprawione kolory ---
+\definecolor{headerblue}{RGB}{9, 56, 102}   
+\definecolor{sidebarlightblue}{RGB}{230, 236, 242} 
+\definecolor{textdark}{RGB}{40, 40, 40}
+
+\definecolor{sectioncolor}{RGB}{9, 56, 102}
+% --- Styl sekcji ---
+% Zastosowanie koloru do sekcji
+\titleformat{\section}
+{\large\bfseries\color{sectioncolor}} % Tutaj zmieniamy kolor tekstu
+{}
+{0pt}
+{}
+[{\color{sectioncolor}\titlerule[1pt]}] % Tutaj zmieniamy kolor linii pod tekstem
+
+
+\begin{document}
+
+% --- TŁO (Niebieski pasek na górze i szary z prawej) ---
+\begin{tikzpicture}[remember picture, overlay]
+    % Szary prostokąt z prawej (35%  szerokości strony)
+    \fill[sidebarlightblue] ([xshift=-7cm]current page.north east) rectangle (current page.south east);
+    % Niebieski prostokąt na górze
+    \fill[headerblue] (current page.north west) rectangle ([yshift=-2.5cm]current page.north east);
+   
+\end{tikzpicture}
+
+% --- TREŚĆ NAGŁÓWKA ---
+\begin{minipage}[t][-0.5cm][c]{\textwidth}
+    \vspace{-1cm}
+    \color{white}
+    \Huge \textbf{Małgorzata Świderek}
+\end{minipage}
+
+\vspace{1cm} % Odstęp od nagłówka
+
+% --- UKŁAD KOLUMN ---
+\begin{minipage}[t]{0.59\textwidth} % LEWA KOLUMNA
+    \color{textdark}
+    \small
+    I am a people-oriented, empathetic, and experienced recruitment specialist with a knack for languages and a long history of working in international teams...
+    
+    \section*{Selected Work Experience}
+    
+    \textbf{Senior IT \& Tech Recruiter} \hfill 2024.01 -- present \\
+    \textit{Orange Polska, Lublin, Poland}
+    \begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+        \item Effective sourcing, screening, and interviewing...
+        \item Specializing in IT recruitment (AI/ML, Cloud)...
+    \end{itemize}
+
+    \vspace{0.3cm}
+    \textbf{IT \& Tech Recruiter} \hfill 2023.08 -- 2024.12 \\
+    \textit{Orange Polska, Lublin, Poland}
+    
+    \section*{Education}
+    Tutaj wpisz swoje studia...
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\textwidth} % PRAWA KOLUMNA (Na szarym tle)
+    \vspace{0cm} % Dopasowanie do góry
+    \color{textdark}
+    
+    % Tutaj możesz wstawić zdjęcie: \includegraphics[width=\textwidth]{foto.jpg}
+    \centering
+    \framebox[4cm][c]{\rule{0pt}{5cm} ZDJĘCIE} 
+    
+    \vspace{0.5cm}
+    \flushleft
+    \small
+    \textbf{Personal Information} \\
+    Lublin, Poland (open to remote) \\
+    --- \\
+    ---
+    
+    \vspace{0.5cm}
+    \textbf{Skills}
+    \begin{itemize}[leftmargin=10pt, noitemsep]
+        \item Recruitment
+        \item Sourcing
+        \item Stakeholder Management
+        \item ATS: LinkedIn Recruiter
+    \end{itemize}
+    
+    \vspace{0.5cm}
+    \textbf{Languages} \\
+    Polish -- native \\
+    English -- fluent \\
+    French -- conversational
+\end{minipage}
+
+\end{document}
