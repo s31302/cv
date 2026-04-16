@@ -14,8 +14,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex
-          args: "-jobname=malgorzata-swiderek-cv -pdf"
+          root_file: malgorzata-swiderek-cv.tex
 
       - name: Update Release
         uses: softprops/action-gh-release@v2
