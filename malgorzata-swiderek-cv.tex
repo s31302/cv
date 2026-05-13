@@ -16,7 +16,7 @@
 \usepackage{tikz}
 
 % --- Konfiguracja strony ---
-\geometry{left=0.5cm, top=1cm, right=1cm, bottom=0.5cm}
+\geometry{left=0.cm, top=1cm, right=0.3cm, bottom=0.1cm}
 \pagestyle{empty}
 
 % --- Poprawione kolory ---
@@ -33,33 +33,31 @@
 {0pt}
 {}
 [{\color{sectioncolor}\titlerule[1pt]}] %kolor linii pod tekstem
-
+\titlespacing*{\section}{0pt}{10pt}{5pt}
 
 \begin{document}
 
 % --- TŁO ---
 \begin{tikzpicture}[remember picture, overlay]
     % Szary prostokąt z prawej (35%  szerokości strony)
-    \fill[sidebarlightblue] ([xshift=-7cm]current page.north east) rectangle (current page.south east);
+    \fill[sidebarlightblue] ([xshift=-8.5cm]current page.north east) rectangle (current page.south east);
     % Niebieski prostokąt na górze
-    \fill[headerblue] (current page.north west) rectangle ([yshift=-2.5cm]current page.north east);
+    \fill[headerblue] (current page.north west) rectangle ([yshift=-1.8cm]current page.north east);
    
 \end{tikzpicture}
 
 % --- TREŚĆ NAGŁÓWKA ---
 \begin{minipage}[t][-0.5cm][c]{\textwidth}
-    \vspace{-1cm}
-    \color{white}
-    \Huge \textbf{Małgorzata Świderek}
+    \vspace{-0.5cm}
+    {\noindent \color{white} \Huge \textbf{Małgorzata Świderek}}
+    \vspace{0.8cm}
 \end{minipage}
 
-\vspace{1cm} % Odstęp od nagłówka
-
 % --- UKŁAD KOLUMN ---
-\begin{minipage}[t]{0.59\textwidth} % LEWA KOLUMNA
+\begin{minipage}[t]{0.54\textwidth} % LEWA KOLUMNA
     \color{textdark}
     \small
-    Jestem empatyczną i chętną do nauki studentką III roku na wydziale Informatyki (specjalizacja Data Science) na PJATK. Szukam stażu, który pozwoli mi się rozwinąć. Aktualnie jestem w trakcie pisania pracy inżynierskiej na temat "Zastosowanie metod uczenia maszynowego w predykcji oczekiwanej długości życia na podstawie wybranych czynników".
+    Jestem chętną do nauki studentką III roku na wydziale Informatyki (specjalizacja Data Science) na Polsko-Japońskiej Akademii Technik Komputerowych. Szukam stażu, który pozwoli mi rozwinąć zdobytą na studiach wiedzę w kierunku tworzenia aplikacji opartych o nowoczesne rozwiązania i technologie. Aktualnie jestem w trakcie pisania pracy inżynierskiej na temat "Zastosowanie metod uczenia maszynowego w predykcji oczekiwanej długości życia na podstawie wybranych czynników".
     
     \section*{Doświadczenie projektowe}
     \textbf{GitHub:} \href{https://github.com/s31302}{\color{headerblue}{github.com/s31302}}
@@ -93,41 +91,62 @@
     \end{itemize}
     
     \section*{Doświadczenie zawodowe}
-    \hfill 07.2024 -- 12.2025 \\
-    \textbf{Pracownik działu administracji HR -- umowa zlecenie}\\
-    \textit{T-Mobile Polska S.A., Warszawa}\\
+
+    \begin{minipage}[c]{0.12\textwidth}
+        \includegraphics[width=\textwidth]{T-Mobile_logo.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.85\textwidth}
+        \textbf{T-Mobile Polska S.A.}\\
+        \textit{Pracownik działu administracji HR -- umowa zlecenie}
+        07.2024 -- 12.2025 
+    \end{minipage}
+
+    \vspace{0.3cm}
+
     
     \textbf{Zakres obowiązków:}
     \begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
-        \item\textit{Digitalizacja zasobów}
-        \item\textit{Zarządzanie danymi}
-        \item\textit{Obsługa systemów informatycznych}
-        \item\textit{Analiza procesów}
+        \item\textit{Digitalizacja dokumentacji}
+        \item\textit{Zarządzanie archiwizacją dokumentacji}
+        \item\textit{Przygotowanie dokumentacji gotowej do implementacji do systemu SAP}
+        \item\textit{Analiza procesów w kierunku ich optymalizacji}
     \end{itemize}
 
     \section*{Edukacja}
-    \hfill 2023 -- obecnie \\
-    \textbf{Polsko-Japońska Akademia Technik Komputerowych (PJATK)}
+
+    \begin{minipage}[c]{0.12\textwidth}
+        \includegraphics[width=\textwidth]{PJATK_logo.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.85\textwidth}
+        \textbf{Polsko-Japońska Akademia Technik Komputerowych (PJATK)}\\
+        2023 -- obecnie 
+    \end{minipage}
     
     \vspace{0.3cm}
 
-    \hfill 2019 -- 2023 \\
-    \textbf{XXI Liceum Ogólnokształcące im. Hugona Kołłątaja w Warszawie}
-
-    \section*{Kursy i Certyfikaty}
-    \hfill 2026 -- obecnie \\
-    \textbf{Umiejętności Jutra AI 3.0 -- Program Szkoleniowy Google} \\
+    \begin{minipage}[c]{0.12\textwidth}
+        \includegraphics[width=\textwidth]{kollataj_logo.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.85\textwidth}
+        \textbf{XXI Liceum Ogólnokształcące im. Hugona Kołłątaja w Warszawie}\\
+        2019 -- 2023
+    \end{minipage}
     
+    \section*{Kursy i Certyfikaty}
+    \textbf{Umiejętności Jutra AI 3.0 -- Program Szkoleniowy Google} \\
+    2026 -- obecnie    
     
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.29\textwidth} % PRAWA KOLUMNA
+\begin{minipage}[t]{0.37\textwidth} % PRAWA KOLUMNA
     \vspace{0cm} 
     \color{textdark}
     
     \centering
-    \hspace*{0.4cm}
-    \includegraphics[width=0.8\textwidth]{portretbw.jpg}
+    \includegraphics[width=0.7\textwidth]{portretbw.jpg}
     
     
     \vspace{0.3cm}
@@ -137,16 +156,8 @@
     \textbf{Kontakt} \\
     \vspace{0.1cm}
     Tel.: +48 509 990 122 \\
-    E-mail: \\malgorzata.swiderek33@gmail.com \\
+    E-mail: malgorzata.swiderek33@gmail.com\\
     Warszawa, Polska
-
-    \vspace{0.3cm}
-    \textbf{Języki} \\
-    \vspace{0.1cm}
-
-    Polski -- ojczysty \\
-    Angielski -- (B1 - B2, w trakcie lektoratu na studiach) \\ 
-    Japoński -- podstawowy (A1, w trakcie nauki)
 
     \vspace{0.3cm}
     \textbf{Umiejętności Twarde} \\
@@ -158,11 +169,23 @@
         \item UML 3/5
         \item Autodesk Fusion 3/5
         \item SQL (T-SQL i PL/SQL) 2/5
-        \item bash -- 1/5
+        \item bash 1/5
         \item C++ 1/5
         \item C\# 1/5
 
     \end{itemize}
+
+    \vspace{0.3cm}
+    \textbf{Języki} \\
+    \begin{itemize}[leftmargin=10pt, noitemsep, topsep=1pt]
+        \item Polski -- ojczysty
+        \item Angielski -- (B1 - B2, w trakcie lektoratu\\na studiach)
+        \item Japoński -- podstawowy (A1, w trakcie nauki)
+
+    \end{itemize}
+
+    
+
     
     \vspace{0.3cm}
     \textbf{Umiejętności Miękkie}
@@ -171,7 +194,7 @@
         \item Szybka nauka
         \item Sumienność
         \item Dbałość o szczegóły
-        \item Praca zespołowa
+        \item Umiejętność pracy zespołowej
 
     \end{itemize}
     
